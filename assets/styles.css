@@ -1,0 +1,54 @@
+
+:root {
+  --bg-main: #fbf9f5;
+  --bg-card: #ffffff;
+  --text-primary: #1c1917;
+  --text-secondary: #57534e;
+  --text-muted: #857f72;
+  --accent-color: #1f5d71;
+  --accent-gold: #c29b38;
+  --border-light: rgba(220, 214, 203, 0.7);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+a { color: inherit; text-decoration: none; }
+.shell { width: 92%; max-width: 1200px; margin: 0 auto; }
+.site-header { background: #fff; border-bottom: 1px solid var(--border-light); padding: 1rem 0; position: sticky; top: 0; z-index: 100; }
+.header-inner { display: flex; justify-content: space-between; align-items: center; }
+.brand { font-weight: 700; font-size: 1.2rem; color: var(--accent-color); display: flex; align-items: center; gap: 0.5rem; }
+.brand-mark { background: var(--accent-color); color: #fff; width: 28px; height: 28px; display: inline-flex; align-items: center; justify-content: center; border-radius: 4px; }
+.main-nav { display: flex; gap: 1.5rem; font-size: 0.95rem; color: var(--text-secondary); }
+.header-call { background: var(--accent-color); color: #fff; padding: 0.5rem 1rem; border-radius: 999px; font-size: 0.9rem; font-weight: 600; }
+.page-hero { padding: 4rem 0 3rem; background: linear-gradient(135deg, #f0f4f5 0%, #e8edf0 100%); border-bottom: 1px solid var(--border-light); }
+.breadcrumbs { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem; display: flex; gap: 0.5rem; align-items: center; }
+.eyebrow { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--accent-color); letter-spacing: 0.1em; display: block; margin-bottom: 0.5rem; }
+h1 { font-size: 2.5rem; margin-bottom: 1rem; font-weight: 800; color: #111; }
+p { color: var(--text-secondary); margin-bottom: 1.5rem; }
+.section { padding: 4rem 0; }
+.section-heading { margin-bottom: 2.5rem; }
+.section-heading h2 { font-size: 2rem; margin-bottom: 0.5rem; font-weight: 700; }
+.district-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; }
+.district-grid article { background: #fff; border: 1px solid var(--border-light); border-radius: 12px; padding: 2rem; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+.district-grid h3 { font-size: 1.3rem; margin-bottom: 0.75rem; color: var(--accent-color); }
+.district-grid a { display: inline-block; margin-top: 1rem; color: var(--accent-color); font-weight: 600; font-size: 0.9rem; }
+.pill { display: inline-block; background: #eef3f5; color: var(--accent-color); font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.75rem; border-radius: 999px; margin-bottom: 1rem; }
+.price-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+.price-list article { background: #fff; border: 1px solid var(--border-light); border-radius: 8px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.02); }
+.price-list h3 { font-size: 1.1rem; margin-bottom: 1rem; color: var(--accent-color); }
+.price-list div { display: flex; flex-direction: column; gap: 0.5rem; font-size: 0.95rem; }
+.price-list span { display: flex; justify-content: space-between; border-bottom: 1px dashed #eee; padding-bottom: 0.25rem; }
+.site-footer { background: #222; color: #aaa; padding: 3rem 0; font-size: 0.9rem; }
+.footer-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2rem; }
+.footer-regions { display: flex; flex-direction: column; gap: 0.5rem; }
+.footer-regions strong { color: #fff; margin-bottom: 0.5rem; }
+.mobile-contact { display: none; }
+@media(max-width: 768px) {
+  .main-nav { display: none; }
+  .mobile-contact { display: flex; position: fixed; bottom: 0; left: 0; right: 0; background: #fff; border-top: 1px solid var(--border-light); padding: 0.75rem; z-index: 999; justify-content: space-around; }
+  .mobile-contact a { background: var(--accent-color); color: #fff; padding: 0.5rem 1.5rem; border-radius: 999px; font-weight: 600; text-align: center; flex: 1; margin: 0 0.5rem; }
+}
